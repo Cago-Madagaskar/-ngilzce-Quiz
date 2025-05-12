@@ -42,98 +42,71 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# === Kelime verisi (zorluk seviyelerine göre) ===
+# === Kelime verisi ===
 word_bank = {
     "1.ünite": {
-        "Tall": "Uzun",
-        "Slim": "Zayıf",
-        "Friendly": "Arkadaş canlısı",
+        "Tall": "uzun",
+        "Slim": "zayıf",
+        "Friendly": "arkadaş canlısı",
         "Honest": "dürüst",
         "Curly": "kıvırcık"
     },
     "2.ünite": {
-       "Basketball": "basketbol",
+        "Basketball": "basketbol",
         "Tennis": "tenis",
         "Coach": "antrenör",
-        "Net": "File",
-        "ball": "top"
+        "Net": "file",
+        "Ball": "top"
     },
     "3.ünite": {
         "Born": "doğmak",
-"Die": "ölmek",
-"Famous": "ünlü",
-"Inventor": "mucit",
-"Success": "başarı",
- 
+        "Die": "ölmek",
+        "Famous": "ünlü",
+        "Inventor": "mucit",
+        "Success": "başarı"
     },
     "4.ünite": {
-    "Lion": "aslan",
-
-"Elephant": "fil",
-
-"Tiger": "kaplan",
-
-"Dangerous": "tehlikeli",
-
-"Habitat": "yaşam alanı",
-},
-"5.ünite": {
-    "Cartoon": "çizgi film",
-
-"News": "haberler",
-
-"Reality show": "gerçeklik programı",
-
-"Remote control": "kumanda",
-
-"Channel": "kanal",
-},
-"6.ünite": {
-    "Birthday": "doğum günü",
-
-"Wedding": "düğün",
-
-"Cake": "pasta",
-
-"Gift": "hediye",
-
-"Invitation": "davetiye",
-},
-"7.ünite": {
-    "Dream": "hayal",
-
-"Future": "gelecek",
-
-"Job": "iş",
-
-"Pilot": "pilot",
-
-"Achieve": "başarmak",
-},
-"8.ünite" : {
-    "Hospital": "hastane",
-
-"Police station": "karakol",
-
-"Museum": "müze",
-
-"Fire station": "itfaiye",
-
-"Library": "kütüphane",
-},
-"9.ünite" : {
-    "Pollution": "kirlilik",
-
-"Recycle": "geri dönüştürmek",
-
-"Nature": "doğa",
-
-"Forest": "orman",
-
-"Climate": "iklim",
-
-},
-
+        "Lion": "aslan",
+        "Elephant": "fil",
+        "Tiger": "kaplan",
+        "Dangerous": "tehlikeli",
+        "Habitat": "yaşam alanı"
+    },
+    "5.ünite": {
+        "Cartoon": "çizgi film",
+        "News": "haberler",
+        "Reality show": "gerçeklik programı",
+        "Remote control": "kumanda",
+        "Channel": "kanal"
+    },
+    "6.ünite": {
+        "Birthday": "doğum günü",
+        "Wedding": "düğün",
+        "Cake": "pasta",
+        "Gift": "hediye",
+        "Invitation": "davetiye"
+    },
+    "7.ünite": {
+        "Dream": "hayal",
+        "Future": "gelecek",
+        "Job": "iş",
+        "Pilot": "pilot",
+        "Achieve": "başarmak"
+    },
+    "8.ünite": {
+        "Hospital": "hastane",
+        "Police station": "karakol",
+        "Museum": "müze",
+        "Fire station": "itfaiye",
+        "Library": "kütüphane"
+    },
+    "9.ünite": {
+        "Pollution": "kirlilik",
+        "Recycle": "geri dönüştürmek",
+        "Nature": "doğa",
+        "Forest": "orman",
+        "Climate": "iklim"
+    }
 }
 
 # === Başlık ve tanıtım ===
@@ -164,25 +137,21 @@ if st.button("▶️ Oyunu Başlat / Sıfırla"):
 # === Quiz başlatıldıysa ===
 if st.session_state.started:
     if st.session_state.index < len(st.session_state.word_list):
-        turkish, english = st.session_state.word_list[st.session_state.index]
-        st.subheader(f"Soru {st.session_state.index + 1}: '{turkish}' ne demektir?")
+        english, turkish = st.session_state.word_list[st.session_state.index]
+        st.subheader(f"Soru {st.session_state.index + 1}: '{turkish}' İngilizcesi nedir?")
         user_input = st.text_input("Cevabınızı girin:", key=st.session_state.index).strip().lower()
 
         if st.button("✅ Cevabı Kontrol Et"):
-            if user_input == english:
+            if user_input == english.lower():
                 st.success("✅ Doğru!")
                 st.session_state.score += 1
             else:
                 st.error(f"❌ Yanlış! Doğru cevap: {english}")
             st.session_state.index += 1
             st.experimental_rerun()
-
-else:
-    st.success(f"🎉 Quiz Bitti! Skorunuz: {st.session_state.score}/{len(st.session_state.word_list)}")
-    if st.session_state.score == 4:
-        st.balloons()
-    st.session_state.started = False
-
+    else:
+        st.success(f"🎉 Quiz Bitti! Skorunuz: {st.session_state.score}/{len(st.session_state.word_list)}")
+        if st.session_state.score_
 
 
 st.markdown("---")
