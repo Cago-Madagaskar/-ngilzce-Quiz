@@ -65,7 +65,7 @@ word_bank = {
 "Inventor": "mucit",
 "Success": "başarı",
  
-    }
+    },
     "4.ünite": {
     "Lion": "aslan",
 
