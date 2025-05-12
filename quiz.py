@@ -66,6 +66,74 @@ word_bank = {
 "Success": "başarı",
  
     }
+    "4.ünite": {
+    "Lion": "aslan",
+
+"Elephant": "fil",
+
+"Tiger": "kaplan",
+
+"Dangerous": "tehlikeli",
+
+"Habitat": "yaşam alanı",
+},
+"5.ünite": {
+    "Cartoon": "çizgi film",
+
+"News": "haberler",
+
+"Reality show": "gerçeklik programı",
+
+"Remote control": "kumanda",
+
+"Channel": "kanal",
+},
+"6.ünite": {
+    "Birthday": "doğum günü",
+
+"Wedding": "düğün",
+
+"Cake": "pasta",
+
+"Gift": "hediye",
+
+"Invitation": "davetiye",
+},
+"7.ünite": {
+    "Dream": "hayal",
+
+"Future": "gelecek",
+
+"Job": "iş",
+
+"Pilot": "pilot",
+
+"Achieve": "başarmak",
+},
+"8.ünite" : {
+    "Hospital": "hastane",
+
+"Police station": "karakol",
+
+"Museum": "müze",
+
+"Fire station": "itfaiye",
+
+"Library": "kütüphane",
+},
+"9.ünite" : {
+    "Pollution": "kirlilik",
+
+"Recycle": "geri dönüştürmek",
+
+"Nature": "doğa",
+
+"Forest": "orman",
+
+"Climate": "iklim",
+
+},
+
 }
 
 # === Başlık ve tanıtım ===
@@ -110,6 +178,7 @@ if st.session_state.started:
             st.experimental_rerun()
 
     else:
-        st.balloons()
         st.success(f"🎉 Quiz Bitti! Skorunuz: {st.session_state.score}/{len(st.session_state.word_list)}")
         st.session_state.started = False
+if: st.session_state.score = 4
+st.balloons()
