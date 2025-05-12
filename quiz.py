@@ -44,26 +44,27 @@ st.markdown("""
 
 # === Kelime verisi (zorluk seviyelerine göre) ===
 word_bank = {
-    "Kolay": {
-        "elma": "apple",
-        "kedi": "cat",
-        "su": "water",
-        "ev": "house",
-        "araba": "car"
+    "1.ünite": {
+        "Tall": "Uzun",
+        "Slim": "Zayıf",
+        "Friendly": "Arkadaş canlısı",
+        "Honest": "dürüst",
+        "Curly": "kıvırcık"
     },
-    "Orta": {
-        "fabrika": "factory",
-        "öğretmen": "teacher",
-        "yolculuk": "journey",
-        "bilgisayar": "computer",
-        "uçak": "airplane"
+    "2.ünite": {
+       "Basketball": "basketbol",
+        "Tennis": "tenis",
+        "Coach": "antrenör",
+        "Net": "File",
+        "ball": "top"
     },
-    "Zor": {
-        "adalet": "justice",
-        "özgürlük": "freedom",
-        "karar": "decision",
-        "başarı": "success",
-        "sabır": "patience"
+    "3.ünite": {,
+        "Born": "doğmak",
+"Die": "ölmek",
+"Famous": "ünlü",
+"Inventor": "mucit",
+"Success": "başarı",
+ 
     }
 }
 
@@ -71,7 +72,7 @@ word_bank = {
 st.title("📘 İngilizce Kelime Quiz")
 st.markdown("""
     🔍 **Kelime Ezberleme Asistanı'na** hoş geldiniz. 
-    Aşağıya seçtiğiniz zorluk seviyesinde quiz başlatabilirsiniz.
+    Aşağıya seçtiğiniz üniteye göre quiz başlatabilirsiniz.
 """)
 
 # === Zorluk Seçimi ===
