@@ -58,7 +58,7 @@ word_bank = {
         "Net": "File",
         "ball": "top"
     },
-    "3.ünite": {,
+    "3.ünite": {
         "Born": "doğmak",
 "Die": "ölmek",
 "Famous": "ünlü",
