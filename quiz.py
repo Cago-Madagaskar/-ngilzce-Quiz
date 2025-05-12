@@ -151,7 +151,8 @@ if st.session_state.started:
             st.experimental_rerun()
     else:
         st.success(f"🎉 Quiz Bitti! Skorunuz: {st.session_state.score}/{len(st.session_state.word_list)}")
-        if st.session_state.score_
+        if st.session_state.score_ >=4 :
+            st.baloons()
 
 
 st.markdown("---")
