@@ -180,5 +180,5 @@ if st.session_state.started:
     else:
         st.success(f"🎉 Quiz Bitti! Skorunuz: {st.session_state.score}/{len(st.session_state.word_list)}")
         st.session_state.started = False
-if: st.session_state.score = 4
+if st.session_state.score >= 4:
 st.balloons()
